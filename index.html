@@ -4,7 +4,7 @@
 <base target="_top">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>DIMZ Finance - Ultimate Tracker</title>
+<title>MONEY TRACKER BY DIMZ</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#6366f1">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -265,7 +265,7 @@ body {
 </head>
 <body data-theme="light">
 <div class="sidebar" id="sidebar">
-  <div class="logo"><div class="logo-icon">💎</div><span>DIMZ Finance</span></div>
+  <div class="logo"><div class="logo-icon">💎</div><span>MONEY TRACKER</span></div>
   <div class="nav-item active" data-page="dashboard" onclick="navTo('dashboard',this)"><span class="ico">📊</span> Dashboard</div>
   <div class="nav-item" data-page="rekening" onclick="navTo('rekening',this)"><span class="ico">🏦</span> Rekening & Aset</div>
   <div class="nav-item" data-page="utang" onclick="navTo('utang',this)"><span class="ico">🤝</span> Utang & Piutang</div>
@@ -478,7 +478,7 @@ body {
 
 <div class="toast" id="toast"></div>
 <script>
-const API_URL = 'ISI_URL_WEB_APP_KAMU_DISINI';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwFdM-RMeek2CyCB-uLWtqgApMy5mwKWlkHWa2kbqjmS_2M1FSthDJ_wMQPTxjwlUlxRw/exec';
 const state = { rekening: [], kategori: [], dashboard: null, selectedKat: '', chart: null };
 const $ = id => document.getElementById(id);
 const fmtRp = n => 'Rp ' + (Number(n)||0).toLocaleString('id-ID');
@@ -509,7 +509,7 @@ function callAPI(action, data = {}) {
 window.addEventListener('DOMContentLoaded', ()=>{
   const now = new Date(); $('trxTanggal').value = now.toISOString().slice(0,10); $('utTanggal').value = now.toISOString().slice(0,10); $('utJatuh').value = now.toISOString().slice(0,10);
   const jam = now.getHours(); let sapaan = jam < 11 ? "Pagi" : jam < 15 ? "Siang" : jam < 18 ? "Sore" : "Malam";
-  $('greeting').textContent = `Selamat ${sapaan}, DIMZ! 👋`;
+  $('greeting').textContent = `Selamat ${sapaan}, RIFKY 👋`;
   
   const firstDay = new Date(now.getFullYear(), now.getMonth(), 1);
   $('filterStart').value = firstDay.toISOString().slice(0,10);
